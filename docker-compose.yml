@@ -5,9 +5,10 @@ services:
   vue:
     build: services/vue
     container_name: vue
+    restart: always
     working_dir: /www
     command: bash -c "npm run dev"
     volumes:
       - ./web:/www
     ports:
-      - 8080:8080
+      - 90:8080
